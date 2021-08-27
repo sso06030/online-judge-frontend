@@ -1,19 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    Home
+  <div class="content">
+    <div class="content flex justify-between items-center">
+      <div class="text-xl font-bold">코딩테스트 연습 문제</div>
+    </div>
+    <div class="content">
+      <list-cont :list-content="listContent"/>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import ListCont from '../components/List/index.vue';
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
+  name: 'ListContent',
+  components: { ListCont },
+  data() {
+    return {
+      listContent: [],
+    };
+  },
+  created() {
+    this.$axios.get('http://3.115.176.201/problems')
+      .then((res) => {
+        this.listContent = res.data.problems;
+      });
   },
 };
 </script>
