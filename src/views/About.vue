@@ -9,20 +9,6 @@
           > {{ title }}
         </div>
         <div class="flex items-center">
-          <!--          <div class="flex items-center mr-4">-->
-          <!--            <div class="rounded-l-lg px-3 border-2 border-gray-600 cursor-pointer"-->
-          <!--                 :class="darkMode?'bg-gray-600 text-white':''"-->
-          <!--                 @click="darkMode=true"-->
-          <!--            >-->
-          <!--              dark-->
-          <!--            </div>-->
-          <!--            <div class="rounded-r-lg px-3 border-2 border-gray-600 cursor-pointer"-->
-          <!--                 :class="!darkMode?'bg-gray-600 text-white':''"-->
-          <!--                 @click="darkMode=false"-->
-          <!--            >-->
-          <!--              light-->
-          <!--            </div>-->
-          <!--          </div>-->
           <div class="cursor-pointer bg-gray-600 text-white font-medium
         rounded-lg px-3 py-1"
                @click.stop="openLanguage"

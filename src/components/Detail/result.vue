@@ -6,7 +6,7 @@
         <div class="font-extrabold">실행결과</div>
         <button class="ml-3 bg-blue-200 py-2 px-5 rounded-lg" @click="submitCode">제출</button>
       </div>
-      <div class="content">
+      <div class="content" style="height: 200px">
         <div v-if="loading">채점중...</div>
         <div v-else class="flex justify-start items-center gap-4">
           <div :class="result ? 'text-green-600' : result===false ? 'text-red-600' : ''">
