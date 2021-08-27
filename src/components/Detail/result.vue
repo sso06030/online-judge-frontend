@@ -86,6 +86,10 @@ export default {
           return '런타임 에러';
         case 3:
           return '오답';
+        case 4:
+          return '시간초과';
+        case 5:
+          return '메모리 초과';
         default:
           return '';
       }

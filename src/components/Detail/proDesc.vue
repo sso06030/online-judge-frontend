@@ -16,7 +16,11 @@
           </thead>
           <tbody>
           <tr v-for="(item, idx) in testCases" :key="idx" :value="idx">
-            <td class="border border-gray-600 py-2 px-5">{{ item.inputEx }}</td>
+            <td class="border border-gray-600 py-2 px-5">
+              <div v-for="i in item.inputEx.split('\n')" :key="i" :value="i">
+                {{i}}
+              </div>
+            </td>
             <td class="border border-gray-600 py-2 px-5">{{ item.outputEx }}</td>
           </tr>
           </tbody>
